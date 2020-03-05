@@ -3,8 +3,8 @@ const app = express();
 const path = require("path");
 // const db = require("./db");
 
-const pathDist = path.join(__dirname, "..", "dist")
-console.log(pathDist)
+const pathDist = path.join(__dirname, "..", "dist");
+console.log(pathDist);
 app.use("/dist", express.static(pathDist));
 
 // app.use("/assets", express.static(path.join(__dirname, "assets")));
