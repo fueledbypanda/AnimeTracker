@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-const axios = require("axios");
-
 const Anime = () => {
   const [animes, setAnimes] = useState([]);
 
