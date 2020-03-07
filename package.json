@@ -2,12 +2,12 @@
   "name": "full_stack_app",
   "version": "1.0.0",
   "description": "- npm i",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
-    "start:dev": "nodemon server --ignore dist/ --ignore src/ & npm run build:dev",
+    "start:dev": "nodemon server.js --ignore dist/ --ignore src/ & npm run build:dev",
     "start": "node src/server.js"
   },
   "keywords": [],
@@ -18,14 +18,17 @@
     "@babel/preset-react": "^7.8.3",
     "axios": "^0.19.2",
     "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
     "express": "^4.17.1",
-    "pg": "^7.18.2"
+    "pg": "^7.18.2",
+    "react-bootstrap": "^1.0.0-beta.17"
   },
   "repository": {
     "type": "git",
