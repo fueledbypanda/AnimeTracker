@@ -2,45 +2,30 @@ import React from "react";
 import CardTemplate from "../CardTemplate";
 
 const styles = {
-  main: {
-    flexDirection: "row",
-    // fontFamily: "fantasy",
-    color: "white",
-    padding: "2rem",
-    backgroundColor: "teal",
+  child: {
     borderRadius: "1rem",
-    width: "18rem",
-    // justifyContent: "space-between",
-    display: "flex",
-    margin: "1rem",
-    // alignItems: "center",
-    flexWrap: "wrap"
+    margin: "1rem"
   },
   container: {
     display: "flex",
+    flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    // alignItems: "center",
-    width: "10rem",
     margin: "1rem"
   }
 };
 export default function AnimeBody(props) {
   // const renderedAnime = props.map(anime => <CardTemplate anime={anime} />);
   const renderedAnime = props.animes.map(anime => (
-    <li key={anime.mal_id}>
+    <div style={styles.child} key={anime.mal_id}>
       <CardTemplate anime={anime} />
-    </li>
+    </div>
   ));
   console.log(props.animes);
 
   return (
     <div>
-      <div className="container" style={styles.container}>
-        <div className="child" styles={styles.main}>
-          {renderedAnime}
-        </div>
-      </div>
+      <div style={styles.container}>{renderedAnime}</div>
     </div>
   );
 }

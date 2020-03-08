@@ -3,6 +3,7 @@ const axios = require("axios");
 
 module.exports = function(server) {
   server.get("/api/anime", (req, res, next) => {
+    console.log("i started");
     axios({
       method: "GET",
       url: "https://jikan1.p.rapidapi.com/top/anime/1/upcoming",
@@ -17,6 +18,9 @@ module.exports = function(server) {
       })
       .catch(error => {
         res.status(500).json(error);
+      })
+      .finally(function() {
+        console.log("i finished");
       });
   });
 };
