@@ -7,8 +7,8 @@ const path = require("path");
 const pathDist = path.join(__dirname, "..", "dist");
 app.use("/dist", express.static(pathDist));
 
-const pathAssets = path.join(__dirname, "..", "assets");
-app.use("/assets", express.static(pathAssets));
+// const pathAssets = path.join(__dirname, "..", "assets");
+// app.use("/assets", express.static(pathAssets));
 
 // app.use("/assets", express.static(path.join(__dirname, "assets")));
 
