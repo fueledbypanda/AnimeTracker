@@ -7,8 +7,8 @@ export default function CardTemplate({ anime }) {
       <div className="card-body">
         <h5 className="card-title">{anime.title}</h5>
         <p className="card-text">Start date: {anime.start_date}</p>
-        <a href="#" className="btn btn-primary">
-          Go somewhere
+        <a href={anime.url} className="btn btn-primary">
+          Anime Info
         </a>
       </div>
     </div>
