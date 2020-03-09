@@ -8,8 +8,7 @@
     "build": "webpack",
     "build:dev": "npm run build -- --watch --mode=development",
     "start:dev": "nodemon src/server.js --ignore dist/ & npm run build:dev",
-    "start": "nodemon src/server.js",
-    "kill": "killall node"
+    "start": "nodemon src/server.js"
   },
   "keywords": [],
   "author": "",
