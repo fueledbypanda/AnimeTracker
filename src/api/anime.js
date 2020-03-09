@@ -5,7 +5,7 @@ module.exports = function(server) {
   server.get("/api/anime", (req, res, next) => {
     axios({
       method: "GET",
-      url: "https://jikan1.p.rapidapi.com/top/anime/1/upcoming",
+      url: "https://jikan1.p.rapidapi.com/top/anime/1/tv",
       headers: {
         "content-type": "application/octet-stream",
         "x-rapidapi-host": "jikan1.p.rapidapi.com",
