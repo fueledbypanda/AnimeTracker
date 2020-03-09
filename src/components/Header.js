@@ -1,21 +1,43 @@
 import React from "react";
+import axios from "axios";
 
-const styles = {
-  header: {
-    color: "white",
-    backgroundColor: "black",
-    width: "100%"
-  }
-};
+// function searchAnime(data) {
+//   console.log(data);
+//   axios
+//     .get("/api/search", {
+//       params: {
+//         q: data
+//       }
+//     })
+//     .then(response => response.status(200).send(response))
+//     .catch(error => console.log(error));
+// }
 
 export default function Header() {
+  //   const [searchAnimes, setSearchAnimes] = useState([]);
+
+  //   useEffect(() => {
+  //     axios
+  //       .get("/api/anime")
+  //       .then(response => {
+  //         setSearchAnimes(response.data);
+  //       })
+  //       .catch(error => {
+  //         console.log(error);
+  //       });
+  //   }, []);
+
   return (
-    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
-      <a class="navbar-brand" href="#" style={{ color: "white" }}>
+    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+      <a
+        className="navbar-brand"
+        href="/"
+        style={{ color: "white", fontSize: "2.5rem" }}
+      >
         PandAnime Tracker
       </a>
       <button
-        class="navbar-toggler"
+        className="navbar-toggler"
         type="button"
         data-toggle="collapse"
         data-target="#navbarSupportedContent"
@@ -23,60 +45,38 @@ export default function Header() {
         aria-expanded="false"
         aria-label="Toggle navigation"
       >
-        <span class="navbar-toggler-icon"></span>
+        <span className="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">
-              Home <span class="sr-only">(current)</span>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto">
+          <li className="nav-item active">
+            <a className="nav-link" href="/" style={{ color: "white" }}>
+              Home <span className="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">
-              Link
-            </a>
-          </li>
-          <li class="nav-item dropdown">
+          <li className="nav-item">
             <a
-              class="nav-link dropdown-toggle"
-              href="#"
-              id="navbarDropdown"
-              role="button"
-              data-toggle="dropdown"
-              aria-haspopup="true"
-              aria-expanded="false"
+              className="nav-link"
+              href="/favorites"
+              style={{ color: "white" }}
             >
-              Dropdown
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">
-                Action
-              </a>
-              <a class="dropdown-item" href="#">
-                Another action
-              </a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">
-                Something else here
-              </a>
-            </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">
-              Disabled
+              Favorites
             </a>
           </li>
         </ul>
-        <form class="form-inline my-2 my-lg-0">
+
+        <form className="form-inline my-2 my-lg-0">
           <input
-            class="form-control mr-sm-2"
+            className="form-control mr-sm-2"
             type="search"
             placeholder="Search"
             aria-label="Search"
           />
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <button
+            className="btn btn-outline-secondary my-2 my-sm-0"
+            type="submit"
+          >
             Search
           </button>
         </form>
